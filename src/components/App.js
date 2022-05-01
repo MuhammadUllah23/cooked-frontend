@@ -1,4 +1,6 @@
 import './App.css';
+import theme from './ui/Theme'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { ThemeProvider } from '@mui/material';
@@ -6,7 +8,7 @@ import { ThemeProvider } from '@mui/material';
 function App() {
   return (
     <div className="App">
-      <ThemeProvider>
+      <ThemeProvider theme={theme}>
         <BrowserRouter >
           <Routes>
             
