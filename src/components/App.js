@@ -1,9 +1,9 @@
-import './App.css';
+
 import theme from './ui/Theme'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { ThemeProvider } from '@mui/material';
+import { Button, ThemeProvider } from '@mui/material';
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter >
           <Routes>
-            
             <Route path="/" element={<div> Landing Page</div>}/>
             <Route path="/login" element={<div> Login Page</div>}/>
             {/* TODO: set up routes below to only render page if user is logged in. If not then navigate to login page.*/}
