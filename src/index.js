@@ -8,7 +8,10 @@ import thunk from 'redux-thunk'
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-const store = configureStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
+const store = configureStore({
+  reducer: rootReducer, 
+  middleware: thunk
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
