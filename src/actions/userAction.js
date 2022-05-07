@@ -1,4 +1,4 @@
-import { SET_EXERCISES, ADD_EXERCISE, UPDATE_EXERCISE, DELETE_EXERCISE, UPDATE_EXERCISE } from "../actions/constants";
+import { SET_PRODUCTS, ADD_PRODUCT, UPDATE_PRODUCT, DELETE_PRODUCT } from "../actions/constants";
 
 export function fetchProducts() {
     return dispatch => {
