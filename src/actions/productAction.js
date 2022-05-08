@@ -1,8 +1,8 @@
-import { SET_PRODUCTS, ADD_PRODUCT, UPDATE_PRODUCT, DELETE_PRODUCT } from "../actions/constants";
+import { SET_PRODUCTS, ADD_PRODUCT, UPDATE_PRODUCT, DELETE_PRODUCT, URL } from "../actions/constants";
 
 export function fetchProducts() {
     return dispatch => {
-        fetch('http://localhost:3000/products', {
+        fetch(URL + '/products', {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: localStorage.getItem("token"),
@@ -26,7 +26,7 @@ export function fetchProducts() {
 
 export function createProducts(product) {
     return dispatch => {
-        fetch('http://localhost:3000/products', {
+        fetch(URL + '/products', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export function createProducts(product) {
 }
 
 export function deleteProduct(product) {
-    return dispatch => (`http://localhost:3000/products/${product.id}`, {
+    return dispatch => (URL + `/products/${product.id}`, {
         method: "DELETE"
     })
     .then(res => {
@@ -54,7 +54,7 @@ export function deleteProduct(product) {
 }
 
 export function updateProduct(product) {
-    return dispatch => (`http://localhost:3000/products/${product.id}`, {
+    return dispatch => (URL + `/products/${product.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
