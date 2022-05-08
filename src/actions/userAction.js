@@ -23,3 +23,22 @@ export function fetchProducts() {
         })
     }
 }
+
+export function createProducts(product) {
+    return dispatch => {
+        fetch('http://localhost:3000/products', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                Authorization: localStorage.getItem("token")
+            },
+            body: JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(product => {
+            dispatch({type: ADD_PRODUCT, payload: product})
+            // it should render the item on the page inventory page.
+        })
+    }
+}
