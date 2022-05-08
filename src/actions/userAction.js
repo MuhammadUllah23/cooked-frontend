@@ -52,3 +52,20 @@ export function deleteProduct(product) {
         // it sould render the inventory page without this product listed
     })
 }
+
+export function updateProduct(product) {
+    return dispatch => (`http://localhost:3000/products/${product.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            Authorization: localStorage.getItem("token")
+        },
+        body: JSON.stringify(project)
+    })
+    .then(res => res.json())
+    .then( product => {
+        dispatch({ type: UPDATE_PRODUCT, payload: product })
+        // should render inventory page with the update product
+    })
+} 
