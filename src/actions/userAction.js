@@ -42,3 +42,13 @@ export function createProducts(product) {
         })
     }
 }
+
+export function deleteProduct(product) {
+    return dispatch => (`http://localhost:3000/products/${product.id}`, {
+        method: "DELETE"
+    })
+    .then(res => {
+        dispatch({ type: DELETE_PRODUCT, payload: product})
+        // it sould render the inventory page without this product listed
+    })
+}
