@@ -1,4 +1,4 @@
-import { SET_PRODUCTS, ADD_PRODUCT, UPDATE_PRODUCT, DELETE_PRODUCT, UPDATE_PRODUCT } from "../actions/constants";
+import { SET_PRODUCTS, ADD_PRODUCT, UPDATE_PRODUCT, DELETE_PRODUCT } from "../actions/constants";
 
 export default function productReducer(state=[], action) {
     switch(action.type) {
