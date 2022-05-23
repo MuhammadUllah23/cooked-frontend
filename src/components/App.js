@@ -1,3 +1,4 @@
+import React from 'react';
 
 import theme from './ui/Theme'
 
@@ -9,6 +10,7 @@ import Login from './Login';
 function App() {
   return (
     <div className="App">
+      <h1>Hi</h1>
       <ThemeProvider theme={theme}>
           <Routes>
             <Route path="/" element={<div>Landing Page</div>}/>
@@ -18,7 +20,7 @@ function App() {
             <Route path="/history" element={<div>History</div>}/>
           </Routes>
       </ThemeProvider>
-      
+
     </div>
   );
 }
