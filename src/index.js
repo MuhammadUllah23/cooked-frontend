@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactDOM } from 'react';
+import * as ReactDOM from 'react-dom';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -19,15 +19,13 @@ const store = configureStore({
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 ReactDOM.render(
-  <React.StrictMode>
   <Provider store={store} >
     <BrowserRouter>
       <div className="wrapper">
       <App />
       </div>
     </BrowserRouter>
-  </Provider>
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
