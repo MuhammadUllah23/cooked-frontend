@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactDOM } from 'react-dom';
+import { ReactDOM } from 'react';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ ReactDOM.render(
   <React.StrictMode>
   <Provider store={store} >
     <BrowserRouter>
-      <div className="wrapper" >
+      <div className="wrapper">
       <App />
       </div>
     </BrowserRouter>
