@@ -17,15 +17,18 @@ const store = configureStore({
   middleware: thunk
 })
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 ReactDOM.render(
+  <React.StrictMode>
+    <h1 color='black'>hi</h1>
   <Provider store={store} >
     <BrowserRouter>
       <div className="wrapper">
-      <App />
+      {/* <App /> */}
       </div>
     </BrowserRouter>
-  </Provider>,
+  </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
