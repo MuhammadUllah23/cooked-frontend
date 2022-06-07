@@ -17,19 +17,20 @@ const store = configureStore({
   middleware: thunk
 })
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
 ReactDOM.render(
-  <React.StrictMode>
-    <h1 color='black'>hi</h1>
-  <Provider store={store} >
-    <BrowserRouter>
-      <div className="wrapper">
-      <App />
-      </div>
-    </BrowserRouter>
-  </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  <h1>hello</h1>
+  // <React.StrictMode>
+  //   <h1 color='black'>hi</h1>
+  // <Provider store={store} >
+  //   <BrowserRouter>
+  //     <div className="wrapper">
+  //     <App />
+  //     </div>
+  //   </BrowserRouter>
+  // </Provider>
+  // </React.StrictMode>,
+  // document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
