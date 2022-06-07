@@ -24,7 +24,7 @@ ReactDOM.render(
   <Provider store={store} >
     <BrowserRouter>
       <div className="wrapper">
-      {/* <App /> */}
+      <App />
       </div>
     </BrowserRouter>
   </Provider>
