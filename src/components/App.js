@@ -10,7 +10,6 @@ import Login from './Login';
 function App() {
   return (
     <div className="App">
-      <h1>Hi</h1>
       <ThemeProvider theme={theme}>
           <Routes>
             <Route path="/" element={<div>Landing Page</div>}/>

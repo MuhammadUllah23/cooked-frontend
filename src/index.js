@@ -14,13 +14,12 @@ import reportWebVitals from './reportWebVitals';
 
 const store = configureStore({
   reducer: rootReducer, 
- 
+
 })
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1 color='black'>hi</h1>
   <Provider store={store} >
     <BrowserRouter>
       <div className="wrapper">
