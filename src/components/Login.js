@@ -14,6 +14,11 @@ export default function Login() {
                 id="email"
                 label="Email"
             />
+            <TextField
+                password
+                id="password"
+                label="Password"
+            />
         </div>
     )
 }
