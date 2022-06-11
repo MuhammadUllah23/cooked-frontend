@@ -8,17 +8,9 @@ import { TextField } from "@mui/material";
 export default function Login() {
 
     return (
-        <div>
-            <TextField
-                required
-                id="email"
-                label="Email"
-            />
-            <TextField
-                password
-                id="password"
-                label="Password"
-            />
-        </div>
+        // Simple Login and sign up page.
+        // Card in the center of Window with tabs on top to switch between login form and signup form
+        // colors: Dark Orchid as backgorund color
+        
     )
 }
