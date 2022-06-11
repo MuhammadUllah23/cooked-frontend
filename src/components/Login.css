@@ -1,9 +1,13 @@
+:root {
+    --darkOrchid: #6A1F9A;
+}
+
 html, body {
     margin:0px;
     height:100vh;
   }
   
   .canvas {
-    background: #6A1F9A;
+    background: var(--darkOrchid);
     height:100vh;
   }
