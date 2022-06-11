@@ -23,8 +23,8 @@ export default function Login() {
         // Card in the center of Window with tabs on top to switch between login form and signup form
         // colors: Dark Orchid as backgorund color
         
-        <Grid container className={classes.canvas} >
-
+        <Grid container style={{backgroundColor: theme.palette.primary}} >
+            <h1>Hello</h1>
         </Grid>
     )
 }
