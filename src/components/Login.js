@@ -21,7 +21,9 @@ export default function Login() {
         // Card in the center of Window with tabs on top to switch between login form and signup form
         // colors: Dark Orchid as backgorund color
         <div className="canvas">
-           
+           <div id="loginBox">
+                <h1>hello</h1>
+           </div>
         </div>
     )
 }
