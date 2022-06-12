@@ -10,14 +10,17 @@ html, body {
   .canvas {
     background: var(--darkOrchid);
     height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #loginBox {
     margin: auto;
     
-  width: 75%;
-  height: 1 ;
-  border: 2px solid green;
+    width: 70%;
+    height: 80vh ;
+    border: 2px solid green;
   
  
   }
