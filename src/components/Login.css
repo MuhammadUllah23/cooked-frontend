@@ -1,3 +1,5 @@
+
+
 :root {
     --darkOrchid: #6A1F9A;
 }
@@ -15,15 +17,3 @@ html, body {
     justify-content: center;
   }
 
-  #loginBox {
-    margin: auto;
-    
-    width: 70%;
-    height: 80vh ;
-    border: 2px solid green;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
-  }
