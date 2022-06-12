@@ -11,6 +11,8 @@ import './Login.css'
 
 
 
+
+
 export default function Login() {
 
     const theme = useTheme()
@@ -22,7 +24,14 @@ export default function Login() {
         // colors: Dark Orchid as backgorund color
         <div className="canvas">
            <div id="loginBox">
-                <h1>hello</h1>
+                <Grid container sx={{height: "100%", justifyContent: "space-between", backgroundColor: "white",}}>
+                <Grid item sx={{backgroundColor: "black", height: "100%", width: "50%"}}>
+                    <h1>hello</h1>
+                </Grid>
+                <Grid item>
+                    <h1>hello</h1>
+                </Grid>
+                </Grid>
            </div>
         </div>
     )

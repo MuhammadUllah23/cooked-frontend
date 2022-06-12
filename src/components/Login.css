@@ -21,6 +21,9 @@ html, body {
     width: 70%;
     height: 80vh ;
     border: 2px solid green;
-  
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
  
   }
