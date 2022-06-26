@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
           <Routes>
-            <Route path="/" element={<div>Landing Page</div>}/>
+            <Route path="/" element={<div>Landing Page. Back to main branch</div>}/>
             <Route path="/login" element={<Login />}/>
             {/* TODO: set up routes below to only render page if user is logged in. If not then navigate to login page.*/}
             <Route path="/inventory" element={<div>Inventory</div>}/>
