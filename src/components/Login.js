@@ -41,16 +41,23 @@ export default function Login() {
         <div className="canvas">
            {/* <styledBox> */}
            <Box sx={{
-                margin: "auto", width: "70%", height: "80vh", border: "2px solid green",
+                margin: "auto", width: "70%", height: "80vh", 
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                backgroundColor: "black"
                 }}>
-                <Grid container sx={{height: "100%", justifyContent: "space-between", backgroundColor: "white",}}>
-                    <Grid item sx={{backgroundColor: "black", height: "100%", width: "50%"}}>
+                <Grid container spacing={5} 
+                    sx={{
+                        margin: "auto", 
+                        height: "100%", 
+                        backgroundColor: "white", 
+                        borderRadius: "25px"}}
+                >
+                    <Grid item  sx={{width: "50%"}}>
                         <h1>hello</h1>
                     </Grid>
-                    <Grid item>
+                    <Grid item sx={{width: "50%"}}>
                         <h1>hello</h1>
                         <Button>press me</Button>
                     </Grid>
