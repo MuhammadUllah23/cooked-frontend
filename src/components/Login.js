@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 
 import { Grid, Box, useMediaQuery, useTheme } from "@mui/material";
 import { Typography } from "@mui/material";
@@ -32,6 +33,7 @@ import './Login.css'
 export default function Login() {
 
     const theme = useTheme()
+    
 
     const renderLoginForm = (
         <div className="login-form">
@@ -69,6 +71,16 @@ export default function Login() {
                 >
                     <Grid item container sx={{width: "50%"}}>
                         {renderLoginForm}
+                        <TextField
+                        fullWidth
+                        id="message"
+                        value={message}
+                        onChange={(event) => setMessage(event.target.value)}
+                        multiline
+                        rows={10}
+                        
+                        InputProps={{ disableUnderline: true }}
+                    />
                     </Grid>
                     <Grid item container sx={{width: "50%", backgroundColor: "lightblue"}}>
                         {/* Pictures of the service will go here */}
