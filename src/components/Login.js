@@ -44,14 +44,21 @@ export default function Login() {
                 <label>Email</label>
                 <input 
                     type="text"
-                    onChange={e => setCredentials({...credentials, email: e.target.value})}
                     name="email" 
                     id="email"
+                    onChange={e => setCredentials({...credentials, email: e.target.value})}
                     value={credentials.email}
                     required 
                 />
                 <label>Password</label>
-                <input type="password" name="password" required />
+                <input 
+                    type="password" 
+                    name="password" 
+                    id="password"
+                    onChange={e => setCredentials({...credentials, password: e.target.value})}
+                    value={credentials.password}
+                    required 
+                />
                 <input type="submit" />
             </form>
         </div>
