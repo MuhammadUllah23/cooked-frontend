@@ -42,7 +42,14 @@ export default function Login() {
         <div className="login-form">
             <form>
                 <label>Email</label>
-                <input type="text" name="email" required />
+                <input 
+                    type="text"
+                    onChange={e => setCredentials({...credentials, email: e.target.value})}
+                    name="email" 
+                    id="email"
+                    value={credentials.email}
+                    required 
+                />
                 <label>Password</label>
                 <input type="password" name="password" required />
                 <input type="submit" />
@@ -74,16 +81,6 @@ export default function Login() {
                 >
                     <Grid item container sx={{width: "50%"}}>
                         {renderLoginForm}
-                        <TextField
-                        fullWidth
-                        id="message"
-                        value={message}
-                        onChange={(event) => setMessage(event.target.value)}
-                        multiline
-                        rows={10}
-                        
-                        InputProps={{ disableUnderline: true }}
-                    />
                     </Grid>
                     <Grid item container sx={{width: "50%", backgroundColor: "lightblue"}}>
                         {/* Pictures of the service will go here */}
