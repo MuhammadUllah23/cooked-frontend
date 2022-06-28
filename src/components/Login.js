@@ -33,7 +33,10 @@ import './Login.css'
 export default function Login() {
 
     const theme = useTheme()
-    
+    const [credentials, setCredentials] = useState({
+        email: "",
+        password: ""
+    })
 
     const renderLoginForm = (
         <div className="login-form">
