@@ -33,6 +33,18 @@ export default function Login() {
 
     const theme = useTheme()
 
+    const renderLoginForm = (
+        <div className="login-form">
+            <form>
+                <label>Email</label>
+                <input type="text" name="email" required />
+                <label>Password</label>
+                <input type="password" name="password" required />
+                <input type="submit" />
+            </form>
+        </div>
+    )
+
     return (
         
         // Simple Login and sign up page.
@@ -44,22 +56,22 @@ export default function Login() {
                 margin: "auto", width: "70%", height: "80vh", 
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "black"
+                justifyContent: "center"
                 }}>
                 <Grid container spacing={5} 
                     sx={{
                         margin: "auto", 
                         height: "100%", 
                         backgroundColor: "white", 
-                        borderRadius: "25px"}}
+                        borderRadius: "25px",
+                        overflow: "hidden"
+                    }}
                 >
-                    <Grid item  sx={{width: "50%"}}>
-                        <h1>hello</h1>
+                    <Grid item container sx={{width: "50%"}}>
+                        {renderLoginForm}
                     </Grid>
-                    <Grid item sx={{width: "50%"}}>
-                        <h1>hello</h1>
-                        <Button>press me</Button>
+                    <Grid item container sx={{width: "50%", backgroundColor: "lightblue"}}>
+                        {/* Pictures of the service will go here */}
                     </Grid>
                 </Grid>
             </Box>   
