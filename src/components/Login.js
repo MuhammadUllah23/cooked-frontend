@@ -38,6 +38,10 @@ export default function Login() {
         password: ""
     })
 
+    const onChange = (event) => {
+        
+    }
+
     const renderLoginForm = (
         <div className="login-form">
             <form>
