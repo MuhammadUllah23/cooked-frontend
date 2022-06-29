@@ -57,6 +57,19 @@ export default function Login() {
                     setEmailHelper("")
                 }
                 break;
+            case "password":
+                setCredentials({...credentials, password: event.target.value})
+                // Checks to see if it is in email format.
+                valid = "(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$".test(
+                    event.target.value
+                );
+                
+                if (!valid) {
+                    setPasswordHelper("Invalid Password")
+                } else {
+                    setPasswordHelper("")
+                }
+                break;    
         }
     }
 
@@ -68,7 +81,7 @@ export default function Login() {
                     type="text"
                     name="email" 
                     id="email"
-                    onChange={e => setCredentials({...credentials, email: e.target.value})}
+                    onChange={onChange}
                     value={credentials.email}
                     required 
                 />
@@ -77,7 +90,7 @@ export default function Login() {
                     type="password" 
                     name="password" 
                     id="password"
-                    onChange={e => setCredentials({...credentials, password: e.target.value})}
+                    onChange={onChange}
                     value={credentials.password}
                     required 
                 />
