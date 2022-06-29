@@ -37,8 +37,11 @@ export default function Login() {
         email: "",
         password: ""
     })
+    const [emailHelper, setEmailHelper] = useState("")
+    const [passwordHelper, setPasswordHelper] = useState("")
 
     const onChange = (event) => {
+        // Function to check if email and password that the user inputted meets the conditions below
         
     }
 
