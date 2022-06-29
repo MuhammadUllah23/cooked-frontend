@@ -41,8 +41,23 @@ export default function Login() {
     const [passwordHelper, setPasswordHelper] = useState("")
 
     const onChange = (event) => {
+        let valid
         // Function to check if email and password that the user inputted meets the conditions below
-        
+        switch (event.target.id) {
+            case "email":
+                setCredentials({...credentials, email: event.target.value})
+                // Checks to see if it is in email format.
+                valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+                    event.target.value
+                );
+                
+                if (!valid) {
+                    setEmailHelper("Invalid Email")
+                } else {
+                    setEmailHelper("")
+                }
+                break;
+        }
     }
 
     const renderLoginForm = (
