@@ -97,7 +97,9 @@ export default function Login() {
                     type={password}
                 />
             </Grid>
-            
+            <Button>
+                Login
+            </Button>
         </div>
     )
 
