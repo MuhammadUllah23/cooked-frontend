@@ -92,6 +92,7 @@ export default function Login() {
                     id="password"
                     onChange={onChange}
                     value={credentials.password}
+                    pattern="(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                     required 
                 />
                 <input type="submit" />
