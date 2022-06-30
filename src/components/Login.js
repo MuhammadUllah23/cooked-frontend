@@ -74,6 +74,16 @@ export default function Login() {
     }
 
     const renderLoginForm = (
+        <Grid item >
+            <TextField
+                  fullWidth
+                  label="email"
+                  id="email"
+                  value={credentials.email}
+                  onChange={onChange}
+                  placeholder="Enter Your Email..."
+                />
+        </Grid>
         <div className="login-form">
             <form>
                 <label>Email</label>
