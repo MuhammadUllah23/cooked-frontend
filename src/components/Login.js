@@ -74,50 +74,30 @@ export default function Login() {
     }
 
     const renderLoginForm = (
-        <Grid item >
-            <TextField
-                  fullWidth
-                  label="email"
-                  id="email"
-                  value={credentials.email}
-                  onChange={onChange}
-                  placeholder="Enter Your Email..."
-                />
-        </Grid>
-        <Grid item >
-            <TextField
-                fullWidth
-                label="pasword"
-                id="password"
-                value={credentials.password}
-                onChange={onChange}
-                placeholder="Enter Your Password..."
-                type={password}
-            />
-        </Grid>
+        
         <div className="login-form">
-            <form>
-                <label>Email</label>
-                <input 
-                    type="text"
-                    name="email" 
+            <Grid item >
+                <TextField
+                    fullWidth
+                    label="email"
                     id="email"
-                    onChange={onChange}
                     value={credentials.email}
-                    required 
-                />
-                <label>Password</label>
-                <input 
-                    type="password" 
-                    name="password" 
-                    id="password"
                     onChange={onChange}
-                    value={credentials.password}
-                    pattern="(^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                    required 
+                    placeholder="Enter Your Email..."
                 />
-                <input type="submit" />
-            </form>
+            </Grid>
+            <Grid item >
+                <TextField
+                    fullWidth
+                    label="pasword"
+                    id="password"
+                    value={credentials.password}
+                    onChange={onChange}
+                    placeholder="Enter Your Password..."
+                    type={password}
+                />
+            </Grid>
+            
         </div>
     )
 
