@@ -94,7 +94,7 @@ export default function Login() {
                     value={credentials.password}
                     onChange={onChange}
                     placeholder="Enter Your Password..."
-                    type={password}
+                    type="password"
                 />
             </Grid>
             <Button>
