@@ -84,6 +84,17 @@ export default function Login() {
                   placeholder="Enter Your Email..."
                 />
         </Grid>
+        <Grid item >
+            <TextField
+                fullWidth
+                label="pasword"
+                id="password"
+                value={credentials.password}
+                onChange={onChange}
+                placeholder="Enter Your Password..."
+                type={password}
+            />
+        </Grid>
         <div className="login-form">
             <form>
                 <label>Email</label>
