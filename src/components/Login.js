@@ -141,7 +141,7 @@ export default function Login() {
                         </Grid>
                         
                     </Grid>
-                    <Grid item container sx={{width: "50%", backgroundColor: "lightblue"}}>
+                    <Grid item container sx={{width: "50%", backgroundColor: "#14047d"}}>
                         {/* Pictures of the service will go here */}
                     </Grid>
                 </Grid>

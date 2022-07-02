@@ -1,4 +1,5 @@
 export const SET_USER = "SET_USER"
+export const GET_USER = "GET_USER"
 
 export const SET_PRODUCTS = "SET_PRODUCTS"
 export const ADD_PRODUCT = "ADD_PRODUCT"
