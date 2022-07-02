@@ -82,17 +82,21 @@ export default function Login() {
                     id="email"
                     value={credentials.email}
                     onChange={onChange}
+                    sx={{
+                        width: "20em"
+                    }}
                 />
             </Grid>
             <Grid item >
                 <TextField
-                    fullWidth
                     label="pasword"
                     id="password"
                     value={credentials.password}
                     onChange={onChange}
-                    placeholder="Enter Your Password..."
                     type="password"
+                    sx={{
+                        width: "20em"
+                    }}
                 />
             </Grid>
             <Button>
