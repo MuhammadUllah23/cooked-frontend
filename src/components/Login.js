@@ -95,13 +95,16 @@ export default function Login() {
                     onChange={onChange}
                     type="password"
                     sx={{
-                        width: "20em"
+                        width: "20em",
+                        marginTop: "2em"
                     }}
                 />
             </Grid>
-            <Button sx={{display: "flex", justifyContent: "center"}} >
+            <Grid item container justifyContent="flex-end" sx={{ marginTop: "2em" }}>
+            <Button >
                 Login
             </Button>
+            </Grid>
         </div>
     )
 
@@ -131,9 +134,12 @@ export default function Login() {
                     <Grid item container direction="column" 
                     sx={{
                         width: "50%",
-                        padding: "2.5em"
+                        padding: "2.5em",
                         }}>
-                        {renderLoginForm}
+                        <Grid item container sx={{justifyContent: "center"}}>
+                            {renderLoginForm}
+                        </Grid>
+                        
                     </Grid>
                     <Grid item container sx={{width: "50%", backgroundColor: "lightblue"}}>
                         {/* Pictures of the service will go here */}
