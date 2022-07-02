@@ -117,15 +117,15 @@ export default function Login() {
                 justifyContent: "center"
                 }}>
                 <Grid container spacing={5} 
-                    sx={{
-                        margin: "auto", 
-                        height: "100%", 
-                        backgroundColor: "white", 
-                        borderRadius: "25px",
-                        overflow: "hidden"
-                    }}
+                sx={{
+                    margin: "auto", 
+                    height: "100%", 
+                    backgroundColor: "white", 
+                    borderRadius: "25px",
+                    overflow: "hidden"
+                }}
                 >
-                    <Grid item container sx={{width: "50%"}}>
+                    <Grid item container direction="column" sx={{width: "50%"}}>
                         {renderLoginForm}
                     </Grid>
                     <Grid item container sx={{width: "50%", backgroundColor: "lightblue"}}>
