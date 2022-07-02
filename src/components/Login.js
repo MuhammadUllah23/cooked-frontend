@@ -76,7 +76,7 @@ export default function Login() {
     const renderLoginForm = (
         
         <div className="login-form">
-            <Grid item >
+            <Grid item sx={{display: "flex", justifyContent: "center"}} >
                 <TextField
                     label="email"
                     id="email"
@@ -87,7 +87,7 @@ export default function Login() {
                     }}
                 />
             </Grid>
-            <Grid item >
+            <Grid item sx={{display: "flex", justifyContent: "center"}} >
                 <TextField
                     label="pasword"
                     id="password"
@@ -99,7 +99,7 @@ export default function Login() {
                     }}
                 />
             </Grid>
-            <Button>
+            <Button sx={{display: "flex", justifyContent: "center"}} >
                 Login
             </Button>
         </div>
