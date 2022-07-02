@@ -78,12 +78,10 @@ export default function Login() {
         <div className="login-form">
             <Grid item >
                 <TextField
-                    fullWidth
                     label="email"
                     id="email"
                     value={credentials.email}
                     onChange={onChange}
-                    placeholder="Enter Your Email..."
                 />
             </Grid>
             <Grid item >
@@ -116,16 +114,21 @@ export default function Login() {
                 alignItems: "center",
                 justifyContent: "center"
                 }}>
-                <Grid container spacing={5} 
+                <Grid container 
                 sx={{
                     margin: "auto", 
                     height: "100%", 
                     backgroundColor: "white", 
                     borderRadius: "25px",
-                    overflow: "hidden"
+                    overflow: "hidden",
+                    
                 }}
                 >
-                    <Grid item container direction="column" sx={{width: "50%"}}>
+                    <Grid item container direction="column" 
+                    sx={{
+                        width: "50%",
+                        padding: "2.5em"
+                        }}>
                         {renderLoginForm}
                     </Grid>
                     <Grid item container sx={{width: "50%", backgroundColor: "lightblue"}}>
