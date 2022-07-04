@@ -46,6 +46,12 @@ export default function Login() {
         email: "",
         password: ""
     })
+
+    const [newUser, setNewUser] = useState({
+        username: "",
+        email: "",
+        password: ""
+    })
     const [emailHelper, setEmailHelper] = useState("")
     const [passwordHelper, setPasswordHelper] = useState("")
 
