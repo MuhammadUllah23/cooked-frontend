@@ -118,18 +118,32 @@ export default function Login() {
     )
 
     const signUpForm = (
-        <Grid item sx={{display: "flex", justifyContent: "center"}} >
-            <TextField
-                label="Email"
-                id="email"
-                value={credentials.email}
-                onChange={onChange}
-                sx={{
-                    width: "20em"
-                }}
-            />
-        </Grid>
-            
+        <div>
+            <Grid item sx={{display: "flex", justifyContent: "center"}} >
+                <TextField
+                    label="Email"
+                    id="email"
+                    value={credentials.email}
+                    onChange={onChange}
+                    sx={{
+                        width: "20em"
+                    }}
+                />
+            </Grid>
+            <Grid item sx={{display: "flex", justifyContent: "center"}} >
+                <TextField
+                    label="Pasword"
+                    id="password"
+                    value={credentials.password}
+                    onChange={onChange}
+                    type="password"
+                    sx={{
+                        width: "20em",
+                        marginTop: "2em"
+                    }}
+                />
+            </Grid>
+        </div>   
     )
 
     return (
