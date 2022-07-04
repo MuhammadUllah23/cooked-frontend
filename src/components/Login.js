@@ -117,9 +117,9 @@ export default function Login() {
                 />
             </Grid>
             <Grid item container justifyContent="flex-end" sx={{ marginTop: "2em" }}>
-            <Button >
-                Login
-            </Button>
+                <Button >
+                    Login
+                </Button>
             </Grid>
         </div>
     )
@@ -175,6 +175,11 @@ export default function Login() {
                         marginTop: "2em"
                     }}
                 />
+            </Grid>
+            <Grid item container justifyContent="flex-end" sx={{ marginTop: "2em" }}>
+                <Button >
+                    Signup
+                </Button>
             </Grid>
         </div>   
     )
