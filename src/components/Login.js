@@ -117,6 +117,10 @@ export default function Login() {
         </div>
     )
 
+    const signUpForm = (
+        
+    )
+
     return (
         
         // Simple Login and sign up page.
