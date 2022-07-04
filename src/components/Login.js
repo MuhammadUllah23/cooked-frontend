@@ -143,6 +143,19 @@ export default function Login() {
                     }}
                 />
             </Grid>
+            <Grid item sx={{display: "flex", justifyContent: "center"}} >
+                <TextField
+                    label="Confirm Pasword"
+                    id="confirmPassword"
+                    value={credentials.confirmPassword}
+                    onChange={e => setCredentials({...credentials, confirmPassword: e.target.value})}
+                    type="password"
+                    sx={{
+                        width: "20em",
+                        marginTop: "2em"
+                    }}
+                />
+            </Grid>
         </div>   
     )
 
