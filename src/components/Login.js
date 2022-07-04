@@ -214,7 +214,9 @@ export default function Login() {
                     </Grid>
                     <Grid item container sx={{width: "50%", padding: "2.5em", backgroundColor: "#14047d"}}>
                         {/* Pictures of the service will go here */}
-                        {signUpForm}
+                        <Grid item container sx={{justifyContent: "center"}} >
+                            {signUpForm}
+                        </Grid>    
                     </Grid>
                 </Grid>
             </Box>   
