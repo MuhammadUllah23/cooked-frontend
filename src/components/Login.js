@@ -8,6 +8,15 @@ import { TextField } from "@mui/material";
 import Theme from "./ui/Theme";
 // import styled from "styled-components";
 
+// TODO: Input fields must have the ability to check if credentials are in right format.
+// TODO: If user has not created a profile then there should be a signup button that opens up a dialog which will have the sign up form.
+// TODO: Remove the second grid item as it is not necessary or use the right grid item for a signup form.
+
+// TODO: When signing up, If user has not put their email and password in correct format then an error box will pop up.
+// TODO: When user does not put right credentials when signing up then an error will pop up saying "Incorrect Email or Password"
+
+// TODO: Make it design dynamic to different screen sizes last.
+
 import './Login.css'
 
 // const styledButton =  styled(Button)`
