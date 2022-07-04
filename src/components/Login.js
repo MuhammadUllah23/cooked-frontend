@@ -118,7 +118,18 @@ export default function Login() {
     )
 
     const signUpForm = (
-        
+        <Grid item sx={{display: "flex", justifyContent: "center"}} >
+            <TextField
+                label="Email"
+                id="email"
+                value={credentials.email}
+                onChange={onChange}
+                sx={{
+                    width: "20em"
+                }}
+            />
+        </Grid>
+            
     )
 
     return (
