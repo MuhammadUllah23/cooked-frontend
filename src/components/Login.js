@@ -87,7 +87,7 @@ export default function Login() {
         <div className="login-form">
             <Grid item sx={{display: "flex", justifyContent: "center"}} >
                 <TextField
-                    label="email"
+                    label="Email"
                     id="email"
                     value={credentials.email}
                     onChange={onChange}
@@ -98,7 +98,7 @@ export default function Login() {
             </Grid>
             <Grid item sx={{display: "flex", justifyContent: "center"}} >
                 <TextField
-                    label="pasword"
+                    label="Pasword"
                     id="password"
                     value={credentials.password}
                     onChange={onChange}
