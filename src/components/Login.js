@@ -50,7 +50,8 @@ export default function Login() {
     const [newUser, setNewUser] = useState({
         username: "",
         email: "",
-        password: ""
+        password: "",
+        confirmPassword: ""
     })
     const [emailHelper, setEmailHelper] = useState("")
     const [passwordHelper, setPasswordHelper] = useState("")
@@ -129,7 +130,7 @@ export default function Login() {
                 <TextField
                     label="Email"
                     id="email"
-                    value={credentials.email}
+                    value={e => setNewUser({...newUser, email: e.target.value})}
                     onChange={onChange}
                     sx={{
                         width: "20em"
@@ -141,7 +142,7 @@ export default function Login() {
                     label="Pasword"
                     id="password"
                     value={credentials.password}
-                    onChange={onChange}
+                    onChange={e => setNewUser({...newUser, password: e.target.value})}
                     type="password"
                     sx={{
                         width: "20em",
@@ -154,7 +155,7 @@ export default function Login() {
                     label="Confirm Pasword"
                     id="confirmPassword"
                     value={credentials.confirmPassword}
-                    onChange={e => setCredentials({...credentials, confirmPassword: e.target.value})}
+                    onChange={e => setNewUser({...newUser, confirmPassword: e.target.value})}
                     type="password"
                     sx={{
                         width: "20em",
