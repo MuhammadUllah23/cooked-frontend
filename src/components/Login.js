@@ -130,8 +130,8 @@ export default function Login() {
                 <TextField
                     label="Username"
                     id="username"
-                    value={e => setNewUser({...newUser, username: e.target.value})}
-                    onChange={onChange}
+                    value={newUser.username}
+                    onChange={e => setNewUser({...newUser, username: e.target.value})}
                     sx={{
                         width: "20em",
                         marginTop: "2em"
@@ -142,8 +142,8 @@ export default function Login() {
                 <TextField
                     label="Email"
                     id="email"
-                    value={e => setNewUser({...newUser, email: e.target.value})}
-                    onChange={onChange}
+                    value={newUser.email}
+                    onChange={e => setNewUser({...newUser, email: e.target.value})}
                     sx={{
                         width: "20em",
                         marginTop: "2em"
@@ -154,7 +154,7 @@ export default function Login() {
                 <TextField
                     label="Pasword"
                     id="password"
-                    value={credentials.password}
+                    value={newUser.password}
                     onChange={e => setNewUser({...newUser, password: e.target.value})}
                     type="password"
                     sx={{
@@ -167,7 +167,7 @@ export default function Login() {
                 <TextField
                     label="Confirm Pasword"
                     id="confirmPassword"
-                    value={credentials.confirmPassword}
+                    value={newUser.confirmPassword}
                     onChange={e => setNewUser({...newUser, confirmPassword: e.target.value})}
                     type="password"
                     sx={{
@@ -212,8 +212,9 @@ export default function Login() {
                         </Grid>
                         
                     </Grid>
-                    <Grid item container sx={{width: "50%", backgroundColor: "#14047d"}}>
+                    <Grid item container sx={{width: "50%", padding: "2.5em", backgroundColor: "#14047d"}}>
                         {/* Pictures of the service will go here */}
+                        {signUpForm}
                     </Grid>
                 </Grid>
             </Box>   
