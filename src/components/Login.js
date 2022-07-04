@@ -128,12 +128,25 @@ export default function Login() {
         <div>
             <Grid item sx={{display: "flex", justifyContent: "center"}} >
                 <TextField
+                    label="Username"
+                    id="username"
+                    value={e => setNewUser({...newUser, username: e.target.value})}
+                    onChange={onChange}
+                    sx={{
+                        width: "20em",
+                        marginTop: "2em"
+                    }}
+                />
+            </Grid>
+            <Grid item sx={{display: "flex", justifyContent: "center"}} >
+                <TextField
                     label="Email"
                     id="email"
                     value={e => setNewUser({...newUser, email: e.target.value})}
                     onChange={onChange}
                     sx={{
-                        width: "20em"
+                        width: "20em",
+                        marginTop: "2em"
                     }}
                 />
             </Grid>
