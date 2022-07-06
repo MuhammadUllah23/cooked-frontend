@@ -92,7 +92,7 @@ export default function Login() {
     const renderLoginForm = (
         
         <div className="login-form">
-            <Grid item >
+            <Grid item sx={{display:"flex", justifyContent: "flex-start"}} >
                 <Typography variant="h4" >
                     Login
                 </Typography>
