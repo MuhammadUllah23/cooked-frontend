@@ -132,8 +132,8 @@ export default function Login() {
 
     const signUpForm = (
         <div>
-            <Grid item >
-                <Typography >
+            <Grid item sx={{display: "flex", justifyContent: "flex-start"}} >
+                <Typography variant="h4" >
                     Signup
                 </Typography>
             </Grid>
