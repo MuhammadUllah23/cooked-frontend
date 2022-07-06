@@ -132,6 +132,11 @@ export default function Login() {
 
     const signUpForm = (
         <div>
+            <Grid item >
+                <Typography >
+                    Signup
+                </Typography>
+            </Grid>
             <Grid item sx={{display: "flex", justifyContent: "center"}} >
                 <TextField
                     label="Username"
