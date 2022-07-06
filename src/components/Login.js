@@ -92,6 +92,11 @@ export default function Login() {
     const renderLoginForm = (
         
         <div className="login-form">
+            <Grid item >
+                <Typography variant="h4" >
+                    Login
+                </Typography>
+            </Grid>
             <Grid item sx={{display: "flex", justifyContent: "center"}} >
                 <TextField
                     label="Email"
