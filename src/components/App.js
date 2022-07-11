@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Button, ThemeProvider } from '@mui/material';
 import Login from './Login';
 import Inventory from './Inventory';
+import Dashboard from './Dashboard';
 
 function App() {
   const navigate = useNavigate()
@@ -20,6 +21,7 @@ function App() {
             <Route path="/login" element={<Login />}/>
             {/* TODO: set up routes below to only render page if user is logged in. If not then navigate to login page.*/}
             <Route path="/inventory" element={<Inventory />}/>
+            <Route path="/dashboard" element={<Dashboard />}/>
             <Route path="/history" element={<div>History</div>}/>
           </Routes>
       </ThemeProvider>
