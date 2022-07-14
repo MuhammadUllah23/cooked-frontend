@@ -27,9 +27,7 @@ export default function Navbar() {
                         key={`${route}${index}`}
                         component={Link} 
                         to={route.link} 
-                        label={route.name} 
-                        aria-owns={route.ariaOwns} 
-                        aria-haspopup={route.ariaPopup} 
+                        label={route.name}  
                         onMouseOver={route.mouseOver} 
                     />
                 ))}
