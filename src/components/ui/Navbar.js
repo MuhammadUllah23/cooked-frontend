@@ -14,6 +14,10 @@ export default function Navbar(props) {
 // TODO: Set up the box that will fill up the screen about 90%-95%.
 // ? Refer to the Arc Development project to build the side nav bar and the header.
 
+const handleChange = (e, newValue) => {
+    props.setValue(newValue)
+}
+
     const routes = [
         {name: "Dashboard", link: "/dashboard", activeIndex: 0},
         {name: "Inventory", link: "/inventory", activeIndex: 1 },
@@ -38,7 +42,7 @@ export default function Navbar(props) {
 
     return (
         <React.Fragment>
-            <h1>this will be the navigation.</h1>
+            {tabs}
         </React.Fragment>
     )
 }
