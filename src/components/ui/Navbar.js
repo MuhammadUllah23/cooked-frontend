@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-export default function Navbar() {
+export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
 // The nav bar is to the left of the screen with the tabs 'Dashboard', 'Inventory', and 'History'. May add more to the future.
 // There will also be a simple header with the name of the web site, the user's username, and a logout button.
