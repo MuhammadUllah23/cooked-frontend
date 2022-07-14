@@ -19,6 +19,24 @@ export default function Navbar() {
         {name: "History", link: "/history", activeIndex: 2},
     ]
 
+    const tabs = (
+        <React.Fragment>
+            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" >
+                {routes.map((route, index) => (
+                    <Tab 
+                        key={`${route}${index}`}
+                        component={Link} 
+                        to={route.link} 
+                        label={route.name} 
+                        aria-owns={route.ariaOwns} 
+                        aria-haspopup={route.ariaPopup} 
+                        onMouseOver={route.mouseOver} 
+                    />
+                ))}
+            </Tabs>
+        </React.Fragment>
+    )
+
     return (
         <React.Fragment>
             <h1>this will be the navigation.</h1>
