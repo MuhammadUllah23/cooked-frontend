@@ -13,6 +13,11 @@ export default function Navbar() {
 // TODO: Set up the box that will fill up the screen about 90%-95%.
 // ? Refer to the Arc Development project to build the side nav bar and the header.
 
+    const routes = [
+        {name: "Dashboard", link: "/dashboard", activeIndex: 0},
+        {name: "Inventory", link: "/inventory", activeIndex: 1 },
+        {name: "History", link: "/history", activeIndex: 2},
+    ]
 
     return (
         <React.Fragment>
