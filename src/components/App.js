@@ -18,7 +18,6 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Navbar />
         <Routes>
           <Route path="/" element={<div>Landing Page. Back to main branch <button onClick={() => navigate('/login')}>Login Page</button></div>}/>
           <Route path="/login" element={<Login />}/>
