@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import Navbar from "./ui/Navbar";
+import Inventory from "./Inventory";
 
 export default function Dashboard() {
 // Dashboard page is to give the user a quick insight of their profit and inventory. The important aspects of their data.
@@ -17,6 +18,7 @@ export default function Dashboard() {
     return (
         <div id="dashboardPage"> 
         {<Navbar />}
+        {<Inventory />}
         </div>
     )
 }

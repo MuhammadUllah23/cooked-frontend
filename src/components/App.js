@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Routes>
-          <Route path="/" element={<div>Landing Page. Back to main branch <button onClick={() => navigate('/login')}>Login Page</button></div>}/>
+          <Route path="/" element={<div>Landing Page. Back to main branch <Button onClick={() => navigate('/login')}>Login Page</Button></div>}/>
           <Route path="/login" element={<Login />}/>
           {/* TODO: set up routes below to only render page if user is logged in. If not then navigate to login page.*/}
           <Route path="/inventory" element={<Inventory />}/>

@@ -12,6 +12,7 @@ export default function Inventory() {
 
     return (
         <div id="inventoryPage"> 
+        <h1>Inventory Page</h1>
         </div>
     )
 }
