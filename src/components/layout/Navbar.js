@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Theme from "../ui/Theme";
 
 export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
@@ -26,7 +27,7 @@ const handleChange = (e, newValue) => {
 
     const tabs = (
         <React.Fragment>
-            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" orientation="vertical">
+            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" orientation="vertical" sx={{backgroundColor: Theme.palette.priamry }}>
                 {routes.map((route, index) => (
                     <Tab 
                         key={`${route}${index}`}

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Navbar from "./ui/Navbar";
+import Navbar from "./layout/Navbar";
 import Inventory from "./Inventory";
 
 export default function Dashboard() {

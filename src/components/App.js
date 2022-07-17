@@ -10,7 +10,7 @@ import Login from './Login';
 import Inventory from './Inventory';
 import Dashboard from './Dashboard';
 
-import Navbar from './ui/Navbar';
+import Navbar from './layout/Navbar';
 
 function App() {
   const navigate = useNavigate()
