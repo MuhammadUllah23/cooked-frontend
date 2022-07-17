@@ -203,7 +203,7 @@ export default function Login() {
         <div className="canvas">
            {/* <styledBox> */}
            <Box sx={{
-                margin: "auto", width: "70%", height: "80vh", 
+                margin: "auto", width: "80%", height: "80vh", 
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
