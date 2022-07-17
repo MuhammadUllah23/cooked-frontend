@@ -13,6 +13,7 @@ import Navbar from './layout/Navbar';
 import './App.css'
 
 import { Box } from "@mui/material"
+import LandingPage from './LandingPage';
 
 function App() {
   const navigate = useNavigate()
@@ -30,7 +31,7 @@ function App() {
                 backgroundColor: "white"
               }}>
           <Routes>
-            <Route path="/" element={<div>Landing Page. Back to main branch <Button onClick={() => navigate('/login')}>Login Page</Button></div>}/>
+            <Route path="/" element={<LandingPage />}/>
             <Route path="/login" element={<Login />}/>
             {/* TODO: set up routes below to only render page if user is logged in. If not then navigate to login page.*/}
             <Route path="/inventory" element={<Inventory />}/>
