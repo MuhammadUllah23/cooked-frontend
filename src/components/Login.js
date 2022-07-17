@@ -200,15 +200,16 @@ export default function Login() {
         // Simple Login and sign up page.
         // Card in the center of Window with tabs on top to switch between login form and signup form
         // colors: Dark Orchid as backgorund color
-        <div >
-           {/* <styledBox> */}
+       
+        
            
             <Grid container 
             sx={{
-                margin: "auto", 
-                height: "100%", 
-                backgroundColor: "white", 
-                borderRadius: "25px",
+                // margin: "auto",
+                marginTop: "8.5em",
+                height: "82%", 
+                width: "100%",
+                // backgroundColor: "lightblue", 
                 overflow: "hidden",
                 // border: "10px solid black"
             }}
@@ -216,21 +217,20 @@ export default function Login() {
                 <Grid item container direction="column" 
                 sx={{
                     width: "50%",
-                    padding: "2.5em", 
+                    // padding: "2.5em", 
                     borderRight: "3px solid black"
                     }}>
                     <Grid item container sx={{justifyContent: "center"}}>
                         {renderLoginForm}
                     </Grid>
                 </Grid>
-                <Grid item container sx={{width: "50%", padding: "2.5em", }}>
+                <Grid item container sx={{width: "50%"}}>
                     {/* Pictures of the service will go here */}
                     <Grid item container sx={{justifyContent: "center"}} >
                         {signUpForm}
                     </Grid>    
                 </Grid>
             </Grid>   
-           {/* </styledBox> */}
-        </div>
+       
     )
 }
