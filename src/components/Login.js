@@ -200,42 +200,36 @@ export default function Login() {
         // Simple Login and sign up page.
         // Card in the center of Window with tabs on top to switch between login form and signup form
         // colors: Dark Orchid as backgorund color
-        <div className="canvas">
+        <div >
            {/* <styledBox> */}
-           <Box sx={{
-                margin: "auto", width: "80%", height: "80vh", 
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
-                }}>
-                <Grid container 
+           
+            <Grid container 
+            sx={{
+                margin: "auto", 
+                height: "100%", 
+                backgroundColor: "white", 
+                borderRadius: "25px",
+                overflow: "hidden",
+                // border: "10px solid black"
+            }}
+            >
+                <Grid item container direction="column" 
                 sx={{
-                    margin: "auto", 
-                    height: "100%", 
-                    backgroundColor: "white", 
-                    borderRadius: "25px",
-                    overflow: "hidden",
-                    border: "10px solid black"
-                }}
-                >
-                    <Grid item container direction="column" 
-                    sx={{
-                        width: "50%",
-                        padding: "2.5em", 
-                        borderRight: "3px solid black"
-                        }}>
-                        <Grid item container sx={{justifyContent: "center"}}>
-                            {renderLoginForm}
-                        </Grid>
-                    </Grid>
-                    <Grid item container sx={{width: "50%", padding: "2.5em", }}>
-                        {/* Pictures of the service will go here */}
-                        <Grid item container sx={{justifyContent: "center"}} >
-                            {signUpForm}
-                        </Grid>    
+                    width: "50%",
+                    padding: "2.5em", 
+                    borderRight: "3px solid black"
+                    }}>
+                    <Grid item container sx={{justifyContent: "center"}}>
+                        {renderLoginForm}
                     </Grid>
                 </Grid>
-            </Box>   
+                <Grid item container sx={{width: "50%", padding: "2.5em", }}>
+                    {/* Pictures of the service will go here */}
+                    <Grid item container sx={{justifyContent: "center"}} >
+                        {signUpForm}
+                    </Grid>    
+                </Grid>
+            </Grid>   
            {/* </styledBox> */}
         </div>
     )
