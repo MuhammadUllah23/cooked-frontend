@@ -17,7 +17,7 @@ import Theme from "./ui/Theme";
 
 // TODO: Make it design dynamic to different screen sizes last.
 
-import './Login.css'
+
 
 // const styledButton =  styled(Button)`
 //   color: white;

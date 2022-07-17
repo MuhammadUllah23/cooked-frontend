@@ -9,8 +9,8 @@ import { Button, ThemeProvider } from '@mui/material';
 import Login from './Login';
 import Inventory from './Inventory';
 import Dashboard from './Dashboard';
-
 import Navbar from './layout/Navbar';
+import './App.css'
 
 import { Box } from "@mui/material"
 
@@ -18,7 +18,7 @@ function App() {
   const navigate = useNavigate()
 
   return (
-    <div className="App">
+    <div className="canvas">
       <ThemeProvider theme={theme}>
         
 
@@ -26,7 +26,8 @@ function App() {
                 margin: "auto", width: "80%", height: "80vh", 
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                backgroundColor: "white"
               }}>
           <Routes>
             <Route path="/" element={<div>Landing Page. Back to main branch <Button onClick={() => navigate('/login')}>Login Page</Button></div>}/>
