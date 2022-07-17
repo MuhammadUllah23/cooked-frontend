@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import theme from './ui/Theme'
+import Theme from './ui/Theme';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="canvas">
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={Theme}>
         
 
         <Box sx={{
