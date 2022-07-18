@@ -19,7 +19,7 @@ function App() {
   const navigate = useNavigate()
 
   return (
-    <div className="canvas">
+    <div className="canvas" >
       <ThemeProvider theme={Theme}>
         
 
