@@ -12,8 +12,12 @@ import useMediaQuery from "@mui/material";
 import List from "@mui/material";
 import ListItem from "@mui/material";
 import ListItemText from "@mui/material";
+import AppBar from "@mui/material";
+import Menu from "@mui/material";
+import MenuItem from "@mui/material";
+import SwipeableDrawer from "@mui/material";
+import useScrollTrigger from "@mui/material";
 
-import Theme from "../ui/Theme";
 
 export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
@@ -35,7 +39,7 @@ const handleChange = (e, newValue) => {
 
     const tabs = (
         <React.Fragment>
-            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" orientation="vertical" sx={{backgroundColor: Theme.palette.priamry }}>
+            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" orientation="vertical" >
                 {routes.map((route, index) => (
                     <Tab 
                         key={`${route}${index}`}
