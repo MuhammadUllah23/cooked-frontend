@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Navbar from "./layout/Navbar";
+import Header from "./layout/Header";
 import Inventory from "./Inventory";
 
 export default function Dashboard() {
@@ -17,7 +17,6 @@ export default function Dashboard() {
 
     return (
         <div id="dashboardPage"> 
-        {<Navbar />}
         {<Inventory />}
         </div>
     )

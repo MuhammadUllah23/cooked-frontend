@@ -9,7 +9,7 @@ import { Button, ThemeProvider } from '@mui/material';
 import Login from './Login';
 import Inventory from './Inventory';
 import Dashboard from './Dashboard';
-import Navbar from './layout/Navbar';
+import Header from './layout/Header';
 import './App.css'
 
 import { Box } from "@mui/material"
