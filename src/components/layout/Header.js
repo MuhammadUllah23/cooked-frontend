@@ -34,6 +34,10 @@ function ElevationScroll(props) {
     });
 }
 
+const CustomAppBar = styled(AppBar)(({ theme }) => ({
+    zIndex: theme.zIndex.modal +  1
+}))
+
 
 export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
@@ -72,9 +76,9 @@ const handleChange = (e, newValue) => {
     return (
         <React.Fragment>
            <ElevationScroll>
-                <AppBar postition="fixed" >
+                <CustomAppBar postition="fixed" >
 
-                </AppBar>
+                </CustomAppBar>
            </ElevationScroll>
         </React.Fragment>
     )
