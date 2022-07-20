@@ -38,6 +38,13 @@ const CustomAppBar = styled(AppBar)(({ theme }) => ({
     zIndex: theme.zIndex.modal +  1
 }))
 
+const ToolBarMargin = styled('div')(({ theme }) => ({
+    toolbarMargin: {
+        ...theme.mixins.toolbar,
+        marginBottom: "3em",
+    }
+}))
+
 
 export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
@@ -82,6 +89,7 @@ const handleChange = (e, newValue) => {
                     </Toolbar>
                 </CustomAppBar>
            </ElevationScroll>
+           < ToolBarMargin />
         </React.Fragment>
     )
 }
