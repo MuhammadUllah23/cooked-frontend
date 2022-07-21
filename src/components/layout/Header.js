@@ -46,6 +46,7 @@ const ToolBarMargin = styled('div')(({ theme }) => ({
 }))
 
 
+
 export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
 // The nav bar is to the left of the screen with the tabs 'Dashboard', 'Inventory', and 'History'. May add more to the future.
@@ -81,7 +82,7 @@ const handleChange = (e, newValue) => {
     )
 
     return (
-        <React.Fragment>
+        <React.Fragment >
            <ElevationScroll>
                 <CustomAppBar postition="fixed" >
                     <Toolbar disableGutters>

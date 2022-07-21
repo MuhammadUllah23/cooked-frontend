@@ -16,8 +16,10 @@ export default function Dashboard() {
 // Refer to the drawn up figures in book to see the design of the page.
 
     return (
+        
         <div id="dashboardPage"> 
-        {<Inventory />}
+        
+
         </div>
     )
 }

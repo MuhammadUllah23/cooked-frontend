@@ -21,13 +21,12 @@ function App() {
   return (
     <div className="canvas" >
       <ThemeProvider theme={Theme}>
-        
-        
+    
         <Box sx={{
                 margin: "auto", width: "80%", height: "80%", 
                 backgroundColor: "white"
               }}>
-            <Header />      
+          <Header />
           <Routes>
             <Route path="/" element={<LandingPage />}/>
             <Route path="/login" element={<Login />}/>
