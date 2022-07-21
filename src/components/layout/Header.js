@@ -17,6 +17,7 @@ import Menu from "@mui/material";
 import MenuItem from "@mui/material";
 import SwipeableDrawer from "@mui/material";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import Grid from "@mui/material/Grid";
 
 
 function ElevationScroll(props) {
@@ -35,14 +36,24 @@ function ElevationScroll(props) {
 }
 
 const CustomAppBar = styled(AppBar)(({ theme }) => ({
-    zIndex: theme.zIndex.modal +  1
+    zIndex: theme.zIndex.modal +  1,
+    width: "80%",
+
 }))
 
 const ToolBarMargin = styled('div')(({ theme }) => ({
     toolbarMargin: {
         ...theme.mixins.toolbar,
         marginBottom: "3em",
-    }
+    },
+    
+}))
+
+const PlacementDiv = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    
 }))
 
 
@@ -82,15 +93,17 @@ const handleChange = (e, newValue) => {
     )
 
     return (
-        <React.Fragment >
-           <ElevationScroll>
-                <CustomAppBar postition="fixed" >
-                    <Toolbar disableGutters>
+        <Grid container sx={{}} >
+            <Grid item sx={{display: "flex", justifySelf:"center", alignSelf: "center"}} >
+                <ElevationScroll>
+                    <CustomAppBar postition="fixed" >
+                        <Toolbar disableGutters>
 
-                    </Toolbar>
-                </CustomAppBar>
-           </ElevationScroll>
-           < ToolBarMargin />
-        </React.Fragment>
+                        </Toolbar>
+                    </CustomAppBar>
+                </ElevationScroll>
+                < ToolBarMargin />
+            </Grid >
+        </Grid>
     )
 }
