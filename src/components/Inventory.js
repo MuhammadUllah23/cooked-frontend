@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Grid } from "@mui/material/Grid";
+
 export default function Inventory() {
 
 // TODO: Set up blueprint for Grid system
@@ -11,7 +13,7 @@ export default function Inventory() {
 // TODO: Product Tab should have a delete button. When clicked it shold open a 'Are You Sure?' Box with a Yes and No Button.  
 
     return (
-        <div id="inventoryPage"> 
+        <div id="inventoryPage">
         <h1>Inventory Page</h1>
         </div>
     )
