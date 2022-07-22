@@ -6,7 +6,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
-import Button from "@mui/material";
+import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material";
 import List from "@mui/material";
 import ListItem from "@mui/material";
@@ -18,7 +18,6 @@ import MenuItem from "@mui/material";
 import SwipeableDrawer from "@mui/material";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Grid from "@mui/material/Grid";
-
 
 function ElevationScroll(props) {
     const { children } = props;
@@ -45,7 +44,13 @@ const ToolBarMargin = styled('div')(({ theme }) => ({
         ...theme.mixins.toolbar,
         marginBottom: "3em",
     },
+}))
     
+const LogoContainerButton = styled(Button)(({ theme }) => ({
+    padding: 0,
+    "&:hover": {
+        backgroundColor: "transparent"
+    }
 }))
 
 
@@ -88,7 +93,9 @@ const handleChange = (e, newValue) => {
             <ElevationScroll>
                 <CustomAppBar postition="fixed" >
                     <Toolbar disableGutters>
-
+                        <LogoContainerButton component={Link} to="/">
+                            
+                        </LogoContainerButton>
                     </Toolbar>
                 </CustomAppBar>
             </ElevationScroll>
