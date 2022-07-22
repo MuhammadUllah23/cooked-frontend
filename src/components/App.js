@@ -22,16 +22,7 @@ function App() {
   return (
     <div className="canvas" >
       <ThemeProvider theme={Theme}>
-        <Grid container sx={{height: "100vh"}} >
-          <Grid item sx={{ }} >
-            <Header sx={{margin: "auto", width: "80%", height: "80%", }} /> 
-          </Grid>
-          
-          <Grid item sx={{
-                  margin: "auto", width: "80%", height: "80%", 
-                  backgroundColor: "white"
-                }}>
-            
+            <Header />           
             <Routes>
               <Route path="/" element={<LandingPage />}/>
               <Route path="/login" element={<Login />}/>
@@ -40,11 +31,6 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />}/>
               <Route path="/history" element={<div>History</div>}/>
             </Routes>
-          </Grid>
-
-        </Grid>
-        
-
       </ThemeProvider>
 
     </div>

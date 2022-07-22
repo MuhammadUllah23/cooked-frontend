@@ -37,8 +37,6 @@ function ElevationScroll(props) {
 
 const CustomAppBar = styled(AppBar)(({ theme }) => ({
     zIndex: theme.zIndex.modal +  1,
-    width: "80%",
-    height: "10%",
     
 }))
 
@@ -49,14 +47,6 @@ const ToolBarMargin = styled('div')(({ theme }) => ({
     },
     
 }))
-
-const PlacementDiv = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    
-}))
-
 
 
 export default function Navbar(props) {
@@ -94,17 +84,15 @@ const handleChange = (e, newValue) => {
     )
 
     return (
-        <Grid container sx={{}} >
-            <Grid item sx={{display: "flex", justifySelf:"center", alignSelf: "center"}} >
-                <ElevationScroll>
-                    <CustomAppBar postition="fixed" >
-                        <Toolbar disableGutters>
+        <React.Fragment>
+            <ElevationScroll>
+                <CustomAppBar postition="fixed" >
+                    <Toolbar disableGutters>
 
-                        </Toolbar>
-                    </CustomAppBar>
-                </ElevationScroll>
-                < ToolBarMargin />
-            </Grid >
-        </Grid>
+                    </Toolbar>
+                </CustomAppBar>
+            </ElevationScroll>
+            < ToolBarMargin />
+        </React.Fragment>        
     )
 }
