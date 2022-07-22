@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Grid } from "@mui/material/Grid";
+import { MainCont } from "./ui/designConstants";
 
 export default function Inventory() {
 
@@ -13,8 +14,9 @@ export default function Inventory() {
 // TODO: Product Tab should have a delete button. When clicked it shold open a 'Are You Sure?' Box with a Yes and No Button.  
 
     return (
-        <div id="inventoryPage">
+        <MainCont >
+        
         <h1>Inventory Page</h1>
-        </div>
+        </MainCont >
     )
 }
