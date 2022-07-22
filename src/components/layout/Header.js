@@ -38,7 +38,8 @@ function ElevationScroll(props) {
 const CustomAppBar = styled(AppBar)(({ theme }) => ({
     zIndex: theme.zIndex.modal +  1,
     width: "80%",
-
+    height: "10%",
+    
 }))
 
 const ToolBarMargin = styled('div')(({ theme }) => ({
