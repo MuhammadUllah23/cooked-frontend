@@ -3,6 +3,8 @@ import * as React from "react";
 import Header from "./layout/Header";
 import Inventory from "./Inventory";
 
+import { MainCont } from "./ui/designConstants";
+
 export default function Dashboard() {
 // Dashboard page is to give the user a quick insight of their profit and inventory. The important aspects of their data.
 // It will not give specifics, but a summary of the data.
@@ -17,9 +19,8 @@ export default function Dashboard() {
 
     return (
         
-        <div id="dashboardPage"> 
-        
-
-        </div>
+        <MainCont container>
+            <h1>Dashboard</h1>
+        </MainCont>
     )
 }

@@ -5,7 +5,8 @@ import { Grid, Box, useMediaQuery, useTheme } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
-import Theme from "./ui/Theme";
+
+import { MainCont } from "./ui/designConstants";
 // import styled from "styled-components";
 
 // TODO: Input fields must have the ability to check if credentials are in right format.
@@ -203,17 +204,7 @@ export default function Login() {
        
         
            
-            <Grid container 
-            sx={{
-                // margin: "auto",
-                marginTop: "8.5em",
-                height: "82%", 
-                width: "100%",
-                // backgroundColor: "lightblue", 
-                overflow: "hidden",
-                // border: "10px solid black"
-            }}
-            >
+            <MainCont container>
                 <Grid item container direction="column" 
                 sx={{
                     width: "50%",
@@ -230,7 +221,7 @@ export default function Login() {
                         {signUpForm}
                     </Grid>    
                 </Grid>
-            </Grid>   
+            </MainCont>   
        
     )
 }

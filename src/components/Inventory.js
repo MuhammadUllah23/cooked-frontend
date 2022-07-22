@@ -14,7 +14,7 @@ export default function Inventory() {
 // TODO: Product Tab should have a delete button. When clicked it shold open a 'Are You Sure?' Box with a Yes and No Button.  
 
     return (
-        <MainCont >
+        <MainCont container >
         
         <h1>Inventory Page</h1>
         </MainCont >
