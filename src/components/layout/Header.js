@@ -55,7 +55,12 @@ const LogoContainerButton = styled(Button)(({ theme }) => ({
 
 const LogoContent = styled('h1')(({ theme }) => ({
     color: "white",
-    marginLeft: "2em"
+    marginLeft: "2em",
+    fontSize: "2em"
+}))
+
+const CustomizedTab = styled(Tab)(({ theme }) => ({
+    minWidth: 10
 }))
 
 
@@ -81,7 +86,7 @@ const handleChange = (e, newValue) => {
         <React.Fragment>
             <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" sx={{marginLeft: '5em'}} >
                 {routes.map((route, index) => (
-                    <Tab 
+                    <CustomizedTab 
                         key={`${route}${index}`}
                         component={Link} 
                         to={route.link} 
