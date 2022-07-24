@@ -56,3 +56,11 @@ export function loginUser(user, navigate) {
     }
 }
 
+export function logoutUser(navigate) {
+    return dispatch => {
+        // Server side is stateless. The User logged in session is not stored on the server side.
+        localStorage.clear()
+        dispatch({type: LOGOUT_USER})
+        navigate("/")
+    }
+}
