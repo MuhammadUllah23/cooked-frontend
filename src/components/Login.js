@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 import { Grid, Box, useMediaQuery, useTheme } from "@mui/material";
 import { Typography } from "@mui/material";
@@ -7,6 +8,7 @@ import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 
 import { MainCont } from "./ui/designConstants";
+import { createUser } from "../actions/userAction";
 // import styled from "styled-components";
 
 // TODO: Input fields must have the ability to check if credentials are in right format.
@@ -41,7 +43,7 @@ import { MainCont } from "./ui/designConstants";
 
 
 export default function Login() {
-
+    const dispatch = useDispatch()
     const theme = useTheme()
     const [credentials, setCredentials] = useState({
         email: "",
