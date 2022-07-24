@@ -207,6 +207,7 @@ export default function Login() {
             <MainCont container>
                 <Grid item container direction="column" 
                 sx={{
+                    marginTop: "3em",
                     width: "50%",
                     // padding: "2.5em", 
                     borderRight: "3px solid black"
@@ -215,7 +216,7 @@ export default function Login() {
                         {renderLoginForm}
                     </Grid>
                 </Grid>
-                <Grid item container sx={{width: "50%"}}>
+                <Grid item container sx={{marginTop: "3em", width: "50%"}}>
                     {/* Pictures of the service will go here */}
                     <Grid item container sx={{justifyContent: "center"}} >
                         {signUpForm}

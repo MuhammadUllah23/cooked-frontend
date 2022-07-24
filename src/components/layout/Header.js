@@ -57,7 +57,7 @@ const LogoContent = styled('h1')(({ theme }) => ({
     color: theme.palette.secondary.dark,
     marginTop: 0,
     marginBottom: 0,
-    marginLeft: "2em",
+    marginLeft: "1.25em",
     fontSize: "3rem"
 }))
 

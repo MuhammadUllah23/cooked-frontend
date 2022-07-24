@@ -30,7 +30,7 @@ export default createTheme({
         tab: {
             fontFamily: 'sans-serif',
             fontWeight: 700,
-            fontSize: "1rem",
+            fontSize: "1.15rem",
             color: "black"
         }
     }
