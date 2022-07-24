@@ -73,6 +73,9 @@ export default function Navbar(props) {
 // The nav bar is to the left of the screen with the tabs 'Dashboard', 'Inventory', and 'History'. May add more to the future.
 // There will also be a simple header with the name of the web site, the user's username, and a logout button.
 
+const iOS =
+  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
 // TODO: Set up the box that will fill up the screen about 90%-95%.
 // ? Refer to the Arc Development project to build the side nav bar and the header.
 
