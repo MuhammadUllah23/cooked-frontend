@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { Grid, Box, useMediaQuery, useTheme } from "@mui/material";
 import { Typography } from "@mui/material";
@@ -45,6 +46,7 @@ import { createUser } from "../actions/userAction";
 export default function Login() {
     const dispatch = useDispatch()
     const theme = useTheme()
+    const navigate = useNavigate()
     const [credentials, setCredentials] = useState({
         email: "",
         password: ""
@@ -66,7 +68,7 @@ export default function Login() {
             email: newUser.email,
             password: newUser.password,
             confirmPassword: newUser.confirmPassword
-        }))
+        }, navigate))
     }
 
     const onChange = (event) => {
