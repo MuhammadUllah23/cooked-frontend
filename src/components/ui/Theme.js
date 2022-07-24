@@ -11,5 +11,12 @@ export default createTheme({
         secondary: {
             main: darkOrchid
         }
+    },
+    typography: {
+        tab: {
+            fontFamily: "Arial",
+            fontWeight: 700,
+            fontSize: "1em"
+        }
     }
 })
