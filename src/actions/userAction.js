@@ -17,7 +17,7 @@ export function fetchUser(){
 
 export function createUser(newUserData, navigate) {
     return dispatch => {
-        fetch(URL + '/user', {
+        fetch(URL + '/users', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -55,3 +55,4 @@ export function loginUser(user, navigate) {
             })
     }
 }
+
