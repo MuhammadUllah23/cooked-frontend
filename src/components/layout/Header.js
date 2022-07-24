@@ -63,7 +63,8 @@ const LogoContent = styled('h1')(({ theme }) => ({
 
 const CustomizedTab = styled(Tab)(({ theme }) => ({
     ...theme.typography.tab,
-    minWidth: 10
+    minWidth: 10,
+    marginRight: "3em"
 }))
 
 
