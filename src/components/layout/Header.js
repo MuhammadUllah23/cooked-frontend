@@ -79,7 +79,7 @@ const handleChange = (e, newValue) => {
 
     const tabs = (
         <React.Fragment>
-            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" orientation="vertical" >
+            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" >
                 {routes.map((route, index) => (
                     <Tab 
                         key={`${route}${index}`}
@@ -101,6 +101,7 @@ const handleChange = (e, newValue) => {
                         <LogoContainerButton disableRipple component={Link} to="/">
                             <LogoContent>Cooked</LogoContent>
                         </LogoContainerButton>
+                        {tabs}
                     </Toolbar>
                 </CustomAppBar>
             </ElevationScroll>
