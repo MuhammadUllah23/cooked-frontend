@@ -15,6 +15,23 @@ export function fetchUser(){
     } 
 }
 
+export function createUser(newUserData, navigate) {
+    return dispatch => {
+        fetch(URL + '/user', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            Accept: "application/json",
+            },
+            body: JSON.stringify(newUserData),
+        })
+        .then((res) => res.json())
+        .then((user) => {
+            dispatch({type: GET_USER, payload: user.data})
+        })
+    }
+}
+
 export function loginUser(user, navigate) {
     return dispatch => {
         fetch(URL + "/login", {
