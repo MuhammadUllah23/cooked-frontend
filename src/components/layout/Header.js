@@ -53,6 +53,11 @@ const LogoContainerButton = styled(Button)(({ theme }) => ({
     }
 }))
 
+const LogoContent = styled('h1')(({ theme }) => ({
+    color: "white",
+    marginLeft: "2em"
+}))
+
 
 export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
@@ -93,8 +98,8 @@ const handleChange = (e, newValue) => {
             <ElevationScroll>
                 <CustomAppBar postition="fixed" >
                     <Toolbar disableGutters>
-                        <LogoContainerButton component={Link} to="/">
-                            
+                        <LogoContainerButton disableRipple component={Link} to="/">
+                            <LogoContent>Cooked</LogoContent>
                         </LogoContainerButton>
                     </Toolbar>
                 </CustomAppBar>
