@@ -1,5 +1,11 @@
 import { GET_USER, SET_PRODUCTS } from "./constants";
 
+export function fetchUser(){
+    return dispatch => {
+        
+    }
+}
+
 export function loginUser(user, navigate) {
     return dispatch => {
         fetch("http://localhost:3000/login", {
