@@ -79,7 +79,7 @@ const handleChange = (e, newValue) => {
 
     const tabs = (
         <React.Fragment>
-            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" >
+            <Tabs value={props.value} onChange={handleChange} indicatorColor="primary" sx={{marginLeft: '5em'}} >
                 {routes.map((route, index) => (
                     <Tab 
                         key={`${route}${index}`}
