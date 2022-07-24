@@ -57,6 +57,16 @@ export default function Login() {
     const [emailHelper, setEmailHelper] = useState("")
     const [passwordHelper, setPasswordHelper] = useState("")
 
+    function handleSignup(event){
+        event.preventDefault()
+        dispatch(createUser({
+            username: newUser.username,
+            email: newUser.email,
+            password: newUser.password,
+            confirmPassword: newUser.confirmPassword
+        }))
+    }
+
     const onChange = (event) => {
         let valid
         // Function to check if email and password that the user inputted meets the conditions below
@@ -189,7 +199,7 @@ export default function Login() {
                 />
             </Grid>
             <Grid item container justifyContent="flex-end" sx={{ marginTop: "2em" }}>
-                <Button >
+                <Button onClick={handleSignup} >
                     Signup
                 </Button>
             </Grid>

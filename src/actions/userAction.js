@@ -28,6 +28,7 @@ export function createUser(newUserData, navigate) {
         .then((res) => res.json())
         .then((user) => {
             dispatch({type: GET_USER, payload: user.data})
+            navigate("/dashboard")
         })
     }
 }
