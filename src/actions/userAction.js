@@ -1,14 +1,23 @@
-import { GET_USER, SET_PRODUCTS } from "./constants";
+import { GET_USER, SET_PRODUCTS, URL } from "./constants";
 
 export function fetchUser(){
     return dispatch => {
-        
-    }
+        fetch(URL + '/current_user',
+        { headers: {
+            "Content-Type": "application/json",
+            Authorization: localStorage.getItem("token"),
+            }
+        })
+        .then((res) => res.json())
+        .then((user) => {
+            dispatch({type:GET_USER, payload: user})
+        })
+    } 
 }
 
 export function loginUser(user, navigate) {
     return dispatch => {
-        fetch("http://localhost:3000/login", {
+        fetch(URL + "/login", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
