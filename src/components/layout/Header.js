@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Button from "@mui/material/Button";
-import useMediaQuery from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import List from "@mui/material";
 import ListItem from "@mui/material";
 import ListItemText from "@mui/material";
@@ -17,7 +17,7 @@ import Menu from "@mui/material";
 import MenuItem from "@mui/material";
 import SwipeableDrawer from "@mui/material";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Grid from "@mui/material/Grid";
+import { useTheme } from '@mui/material/styles';
 
 function ElevationScroll(props) {
     const { children } = props;
@@ -72,6 +72,8 @@ export default function Navbar(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
 // The nav bar is to the left of the screen with the tabs 'Dashboard', 'Inventory', and 'History'. May add more to the future.
 // There will also be a simple header with the name of the web site, the user's username, and a logout button.
+const theme = useTheme()
+const matchesMd = useMediaQuery(theme.breakpoints.down("md"))
 
 const iOS =
   typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
