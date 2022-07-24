@@ -1,4 +1,4 @@
-import { GET_USER, SET_PRODUCTS, URL } from "./constants";
+import { SET_USER, SET_PRODUCTS, URL, LOGOUT_USER } from "./constants";
 
 export function fetchUser(){
     return dispatch => {
@@ -10,7 +10,7 @@ export function fetchUser(){
         })
         .then((res) => res.json())
         .then((user) => {
-            dispatch({type:GET_USER, payload: user})
+            dispatch({type: SET_USER, payload: user})
         })
     } 
 }
@@ -27,7 +27,7 @@ export function createUser(newUserData, navigate) {
         })
         .then((res) => res.json())
         .then((user) => {
-            dispatch({type: GET_USER, payload: user.data})
+            dispatch({type:  SET_USER, payload: user.data})
             navigate("/dashboard")
         })
     }
@@ -49,7 +49,7 @@ export function loginUser(user, navigate) {
                 } 
             })
             .then((user) => {
-                dispatch({type: GET_USER, payload: user.data})
+                dispatch({type:  SET_USER, payload: user.data})
                 dispatch({type: SET_PRODUCTS, payload: user.data.products})
                 // navigate to user profile
             })
