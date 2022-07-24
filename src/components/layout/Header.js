@@ -54,12 +54,13 @@ const LogoContainerButton = styled(Button)(({ theme }) => ({
 }))
 
 const LogoContent = styled('h1')(({ theme }) => ({
-    color: "white",
+    color: theme.palette.secondary.dark,
     marginLeft: "2em",
     fontSize: "2em"
 }))
 
 const CustomizedTab = styled(Tab)(({ theme }) => ({
+    ...theme.typography.tab,
     minWidth: 10
 }))
 
