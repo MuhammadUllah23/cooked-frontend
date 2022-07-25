@@ -27,6 +27,7 @@ export function createUser(newUserData, navigate) {
         })
         .then((res) => res.json())
         .then((user) => {
+            localStorage.setItem("jwt", user.jwt);
             dispatch({type:  SET_USER, payload: user.data})
             navigate("/dashboard")
         })
@@ -42,13 +43,9 @@ export function loginUser(user, navigate) {
             },
             body: JSON.stringify({user}),
         })
-            .then((res) => {
-                if (res.ok) {
-                    localStorage.setItem("token", res.headers.get("Authorization"));
-                    return res.json()
-                } 
-            })
+            .then((res) => res.json())
             .then((user) => {
+                localStorage.setItem("jwt", user.jwt);
                 dispatch({type:  SET_USER, payload: user.data})
                 dispatch({type: SET_PRODUCTS, payload: user.data.products})
                 // navigate to user profile
