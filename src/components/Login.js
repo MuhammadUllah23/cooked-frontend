@@ -226,13 +226,13 @@ export default function Login() {
                     // padding: "2.5em", 
                     borderRight: "3px solid black"
                     }}>
-                    <Grid item container sx={{justifyContent: "center"}}>
+                    <Grid item container sx={{marginLeft: "5em"}}>
                         {renderLoginForm}
                     </Grid>
                 </Grid>
                 <Grid item container sx={{marginTop: "3em", width: "50%"}}>
                     {/* Pictures of the service will go here */}
-                    <Grid item container sx={{justifyContent: "center"}} >
+                    <Grid item container sx={{marginLeft: "5em"}} >
                         {signUpForm}
                     </Grid>    
                 </Grid>
