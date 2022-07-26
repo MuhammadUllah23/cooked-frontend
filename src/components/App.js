@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Theme from './ui/Theme';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 import { Button, ThemeProvider } from '@mui/material';
 import Login from './Login';
@@ -18,6 +20,8 @@ import LandingPage from './LandingPage';
 
 function App() {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+
 
   return (
     <div className="canvas" >
