@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
@@ -74,6 +76,7 @@ export default function Navbar(props) {
 // There will also be a simple header with the name of the web site, the user's username, and a logout button.
 const theme = useTheme()
 const matchesMd = useMediaQuery(theme.breakpoints.down("md"))
+const user = useSelector(state => state.user.length)
 
 const iOS =
   typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -116,6 +119,7 @@ const handleChange = (e, newValue) => {
                             <LogoContent>Cooked</LogoContent>
                         </LogoContainerButton>
                         {tabs}
+                        {user}
                     </Toolbar>
                 </CustomAppBar>
             </ElevationScroll>
