@@ -17,10 +17,18 @@ import './App.css'
 import { Box } from "@mui/material"
 import Grid from '@mui/material/Grid';
 import LandingPage from './LandingPage';
+import { fetchUser } from '../actions/userAction';
+import { fetchProducts } from '../actions/productAction';
 
 function App() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  
+
+  useEffect(() => {
+    dispatch(fetchUser())
+    dispatch(fetchProducts())
+  }, [])
 
 
   return (

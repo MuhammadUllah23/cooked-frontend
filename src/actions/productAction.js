@@ -61,7 +61,7 @@ export function updateProduct(product) {
             "Accept": "application/json",
             Authorization: localStorage.getItem("token")
         },
-        body: JSON.stringify(project)
+        body: JSON.stringify(product)
     })
     .then(res => res.json())
     .then( product => {
