@@ -6,6 +6,7 @@ import Theme from './ui/Theme';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { useState } from 'react';
 
 import { Button, ThemeProvider } from '@mui/material';
 import Login from './Login';
@@ -23,7 +24,7 @@ import { fetchProducts } from '../actions/productAction';
 function App() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  
+  const userExists = useSelector(state => Object.keys(state.user).length > 0)
 
   useEffect(() => {
     dispatch(fetchUser())
@@ -34,7 +35,7 @@ function App() {
   return (
     <div className="canvas" >
       <ThemeProvider theme={Theme}>
-            <Header />           
+            {userExists ? <Header value="userExists"/> : <Header />}           
             <Routes>
               <Route path="/" element={<LandingPage />}/>
               <Route path="/login" element={<Login />}/>
