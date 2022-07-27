@@ -70,7 +70,7 @@ const CustomizedTab = styled(Tab)(({ theme }) => ({
 }))
 
 
-export default function Navbar(props) {
+export default function Header(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
 // The nav bar is to the left of the screen with the tabs 'Dashboard', 'Inventory', and 'History'. May add more to the future.
 // There will also be a simple header with the name of the web site, the user's username, and a logout button.
