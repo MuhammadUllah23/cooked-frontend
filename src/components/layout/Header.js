@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -85,6 +86,7 @@ export default function Header(props) {
 // The nav bar is to the left of the screen with the tabs 'Dashboard', 'Inventory', and 'History'. May add more to the future.
 // There will also be a simple header with the name of the web site, the user's username, and a logout button.
 const theme = useTheme()
+const navigate = useNavigate()
 const matchesMd = useMediaQuery(theme.breakpoints.down("md"))
 
 const iOS =
@@ -128,7 +130,7 @@ const handleChange = (e, newValue) => {
                             <LogoContent>Cooked</LogoContent>
                         </LogoContainerButton>
                         {tabs}
-                        <LoginSignupButton>
+                        <LoginSignupButton onClick={() => navigate('/login')}>
                             <h2>Login/Signup</h2>
                         </LoginSignupButton>
                     </Toolbar>
