@@ -76,7 +76,6 @@ export default function Header(props) {
 // There will also be a simple header with the name of the web site, the user's username, and a logout button.
 const theme = useTheme()
 const matchesMd = useMediaQuery(theme.breakpoints.down("md"))
-const user = useSelector(state => state.user.length)
 
 const iOS =
   typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -119,8 +118,7 @@ const handleChange = (e, newValue) => {
                             <LogoContent>Cooked</LogoContent>
                         </LogoContainerButton>
                         {tabs}
-                        {user}
-                        {props.userExists}
+                        
                     </Toolbar>
                 </CustomAppBar>
             </ElevationScroll>
