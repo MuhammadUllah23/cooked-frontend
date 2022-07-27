@@ -120,7 +120,7 @@ const handleChange = (e, newValue) => {
                         </LogoContainerButton>
                         {tabs}
                         {user}
-                        {props.value}
+                        {props.userExists}
                     </Toolbar>
                 </CustomAppBar>
             </ElevationScroll>

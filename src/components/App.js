@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="canvas" >
       <ThemeProvider theme={Theme}>
-            {userExists ? <Header value="userExists"/> : <Header />}           
+            {userExists ? <Header userExists="userExists"/> : <Header />}           
             <Routes>
               <Route path="/" element={<LandingPage />}/>
               <Route path="/login" element={<Login />}/>
