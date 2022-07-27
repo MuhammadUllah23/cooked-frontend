@@ -69,6 +69,16 @@ const CustomizedTab = styled(Tab)(({ theme }) => ({
     marginRight: "3em"
 }))
 
+const LoginSignupButton = styled(Button)(({ theme }) => ({
+    color: "white",
+    backgroundColor: theme.palette.secondary.dark,
+    padding: 0,
+    height: "2.5em",
+    width: "15em",
+    marginLeft: "auto",
+    marginRight: "3em"
+}))
+
 
 export default function Header(props) {
 // This will be the navigation bar and header that will only render for the logged in user to navigate between the tabs.
@@ -118,7 +128,9 @@ const handleChange = (e, newValue) => {
                             <LogoContent>Cooked</LogoContent>
                         </LogoContainerButton>
                         {tabs}
-                        
+                        <LoginSignupButton>
+                            <h2>Login/Signup</h2>
+                        </LoginSignupButton>
                     </Toolbar>
                 </CustomAppBar>
             </ElevationScroll>
